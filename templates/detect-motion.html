@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{%block styles%}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">{%endblock%}
+{%block title%} <title>Smart Home - Motion Detection</title> {%endblock%}
+
+{%block content%}
+    <h2>Simulate Detected Motion</h2>
+    <div class="login-btns">
+        
+        <form action="{{url_for('detect_motion')}}" method="post">
+            <input type="hidden" value="16791e0b-69c2-4e62-919f-f1eb0296ca6a" name='ip'>
+            <button class="login-btn pink">Obývačka</button>
+        </form>
+        <form action="{{url_for('detect_motion')}}" method="post">
+            <input type="hidden" value="070e5685-65fc-48b6-8fc4-d3e8c19ed36d" name='ip'>
+            <button class="login-btn yellow">Kuchiňa</button>
+        </form>
+    </div>
+{%endblock%}

@@ -1,0 +1,80 @@
+/* INDEX PAGE */
+#byt {
+  position: relative; /* This make the size of the children relative to this element, not the body. */
+  background-color: #868686;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+}
+#byt > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#byt > div > p {
+  color: black;
+}
+#levyHorniPokoj {
+  position: absolute;
+  height: 50%;
+  width: 20%;
+  background-color: #e4a27b;
+}
+#levyDolniPokoj {
+  position: absolute;
+  top: 50%;
+  height: 50%;
+  width: 20%;
+  background-color: #836de6;
+}
+#pravyHorniPokoj {
+  position: absolute;
+  left: 80%;
+  height: 50%;
+  width: 20%;
+  background-color: #e45353;
+}
+#pravyDolniPokoj {
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  height: 50%;
+  width: 20%;
+  background-color: #58d9eb;
+}
+#levaSpolenaMistnost {
+  position: absolute;
+  left: 20%;
+  height: 35%;
+  width: 30%;
+  background-color: #c8f772;
+}
+#pravaSpolecnaMistnost {
+  position: absolute;
+  left: 50%;
+  height: 35%;
+  width: 30%;
+  background-color: #f5c84e;
+}
+#obyvak {
+  position: absolute;
+  left: 20%;
+  top: 35%;
+  height: 65%;
+  width: 60%;
+  background-color: #f568d1;
+}
+.light-switch {
+  background: transparent;
+  border: solid 3px rgb(17, 17, 17);
+  cursor: pointer;
+  padding: 5px;
+  color: black;
+}
+.light-switch:hover {
+  background: rgba(0, 0, 0, 0.418);
+}
+.on {
+  box-shadow: inset 0 0 0 2000px rgb(240, 232, 127);
+}

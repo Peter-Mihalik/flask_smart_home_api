@@ -1,0 +1,54 @@
+.login-btns {
+  width: 80%;
+  margin: auto;
+}
+.login-btn {
+  display: inline-block;
+  margin: 10px;
+  border: solid 3px rgb(17, 17, 17);
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+form {
+  display: inline-block;
+}
+.login-btn:hover {
+  color: white;
+}
+.orange {
+  border-color: #e4a27b;
+}
+.orange:hover {
+  background-color: #e4a27b;
+}
+.red {
+  border-color: #e45353;
+}
+.red:hover {
+  background: #df7171;
+}
+.purple {
+  border-color: #836de6;
+}
+.purple:hover {
+  background-color: #9d8de6;
+}
+.blue {
+  border-color: #58d9eb;
+}
+.blue:hover {
+  background-color: #90d5df;
+}
+.pink {
+  border-color: #f568d1;
+}
+.yellow {
+  border-color: #f5c84e;
+}
+.pink:hover {
+  background-color: #f59ddf;
+}
+.yellow:hover {
+  background-color: #f7dd98;
+}

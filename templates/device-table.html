@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+{%block styles%}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/device-table.css') }}">{%endblock%}
+{%block title%} <title>Smart Home - Device Table</title> {%endblock%}
+
+{%block content%}
+    <h2>Device Table</h2>
+    <div class="table-block">
+
+        <div class="table">
+
+            <div class="table-header">
+                {%for key,value in devices.items()%}
+                    <div class="item">{{key}}</div>
+                    {%if key == 'karloss room'%}
+                        </div>
+                    {%endif%}
+                    {%if key == 'livingroom'%}
+                        <div class="table-columns">
+                    {%endif%}
+                    <div class="table-column">
+                        {%for new_key,new_value in value.items()%}
+                            <div class="item"><a href={{url+new_value}}>{{new_key}}</a></div>
+                        {%endfor%}
+                    </div>
+                {%endfor%}
+                </div>
+
+        </div>
+
+    </div>
+{%endblock%}

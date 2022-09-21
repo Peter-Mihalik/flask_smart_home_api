@@ -1,0 +1,14 @@
+.table-block {
+  width: 80%;
+  margin: auto;
+  min-height: 20%;
+}
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.table-header {
+  display: flex;
+  flex-direction: row;
+}

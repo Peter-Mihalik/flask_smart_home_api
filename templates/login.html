@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+
+{%block styles%}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">{%endblock%}
+{%block title%} <title>Smart Home - Login Page</title> {%endblock%}
+
+{%block content%}
+    <h2>Choose Account</h2>
+    <div class="login-btns">
+        
+        <form action="{{url_for('login_page')}}" method="post">
+            <input type="hidden" value="karsob" name='name'>
+            <button class="login-btn orange">Sob Karsob</button>
+        </form>
+        <form action="{{url_for('login_page')}}" method="post">
+            <input type="hidden" value="karlos" name='name'>
+            <button class="login-btn red">Los Karlos</button>
+        </form>
+        <form action="{{url_for('login_page')}}" method="post">
+            <input type="hidden" value="julie" name='name'>
+            <button class="login-btn blue">Želvička Julie</button>
+        </form>
+        <form action="{{url_for('login_page')}}" method="post">
+            <input type="hidden" value="karlik" name='name'>
+            <button class="login-btn purple">Karlík</button>
+        </form>
+    </div>
+{%endblock%}

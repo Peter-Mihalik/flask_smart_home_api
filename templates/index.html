@@ -1,0 +1,139 @@
+{%extends 'base.html'%}
+
+{%block styles%}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">{%endblock%}
+{%block title%} <title>Smart Home - Home Page</title> {%endblock%}
+
+{%block content%}
+    <div class="content-block">
+        <h2>Flat Map</h2>
+        <div id="byt">
+            <div id="levyHorniPokoj">
+                {%if lights[3][1]['current_state'] == True%}
+                    <p>Sob Karsob - On - {{lights[3][1]['color_temperature']}} K</p>
+                    <script>
+                        document.querySelector('#levyHorniPokoj').classList.add('on')
+                    </script>
+                {%else%}
+                    <p>Sob Karsob - Off</p>
+                    <script>
+                        document.querySelector('#levyHorniPokoj').classList.remove('off')
+                    </script>
+                {%endif%}
+                {%if user == 'karsob'%}
+                    <form action="{{url_for('switch_light')}}" method="post">
+                        <input type="hidden" value="a3cebc1c-ead8-4e36-9c04-1d54e29de872" name="ip">
+                        <button class="light-switch">Light Switch</button>
+                    </form>
+                {%endif%}
+            </div>
+            <div id="pravyHorniPokoj">
+                {%if lights[6][1]['current_state'] == True%}
+                    <p>Los Karlos - On - {{lights[6][1]['color_temperature']}} K</p>
+                    <script>
+                        document.querySelector('#pravyHorniPokoj').classList.add('on')
+                    </script>
+                {%else%}
+                    <p>Los Karlos - Off</p>
+                    <script>
+                        document.querySelector('#pravyHorniPokoj').classList.remove('off')
+                    </script>
+                {%endif%}
+                {%if user == 'karlos'%}
+                    <form action="{{url_for('switch_light')}}" method="post">
+                        <input type="hidden" value="de5ecd73-9e95-40e6-9b92-5a7e62587f35" name="ip">
+                        <button class="light-switch">Light Switch</button>
+                    </form>
+                {%endif%}
+            </div>
+            <div id="levaSpolenaMistnost">
+                {%if lights[2][1]['current_state'] == True%}
+                    <p>Koupelna - On - {{lights[2][1]['color_temperature']}} K</p>
+                    <script>
+                        document.querySelector('#levaSpolenaMistnost').classList.add('on')
+                    </script>
+                {%else%}
+                    <p>Koupelna - Off</p>
+                    <script>
+                        document.querySelector('#levaSpolenaMistnost').classList.remove('off')
+                    </script>
+                {%endif%}
+                <form action="{{url_for('switch_light')}}" method="post">
+                    <input type="hidden" value="5f8be8b8-5594-4f36-be43-6c130cca8396" name="ip">
+                    <button class="light-switch">Light Switch</button>
+                </form>
+            </div>
+            <div id="pravaSpolecnaMistnost">
+                {%if lights[1][1]['current_state'] == True%}
+                    <p>Kuchyně - On - {{lights[1][1]['color_temperature']}} K</p>
+                    <script>
+                        document.querySelector('#pravaSpolecnaMistnost').classList.add('on')
+                    </script>
+                {%else%}
+                    <p>Kuchyně - Off</p>
+                    <script>
+                        document.querySelector('#pravaSpolecnaMistnost').classList.remove('off')
+                    </script>
+                {%endif%}
+                <form action="{{url_for('switch_light')}}" method="post">
+                    <input type="hidden" value="287beef9-da2d-4a7f-9518-de2185915a90" name="ip">
+                    <button class="light-switch">Light Switch</button>
+                </form>
+            </div>
+            <div id="pravyDolniPokoj">
+                {%if lights[5][1]['current_state'] == True%}
+                    <p>Želvička Julie - On - {{lights[5][1]['color_temperature']}} K</p>
+                    <script>
+                        document.querySelector('#pravyDolniPokoj').classList.add('on')
+                    </script>
+                {%else%}
+                    <p>Želvička Julie - Off</p>
+                    <script>
+                        document.querySelector('#pravyDolniPokoj').classList.remove('off')
+                    </script>
+                {%endif%}
+                {%if user == 'julie'%}
+                    <form action="{{url_for('switch_light')}}" method="post">
+                        <input type="hidden" value="92921bd8-e37f-4cd0-a7c0-db5c5b708a20" name="ip">
+                        <button class="light-switch">Light Switch</button>
+                    </form>
+                {%endif%}
+            </div>
+            <div id="levyDolniPokoj">
+                {%if lights[4][1]['current_state'] == True%}
+                    <p>Karlík - On - {{lights[4][1]['color_temperature']}} K</p>
+                    <script>
+                        document.querySelector('#levyDolniPokoj').classList.add('on')
+                    </script>
+                {%else%}
+                    <p>Karlík - Off</p>
+                    <script>
+                        document.querySelector('#levyDolniPokoj').classList.remove('off')
+                    </script>
+                {%endif%}
+                {%if user == 'karlik'%}
+                    <form action="{{url_for('switch_light')}}" method="post">
+                        <input type="hidden" value="403af07c-e5c2-43a8-9243-d60bfe2e966f" name="ip">
+                        <button class="light-switch">Light Switch</button>
+                    </form>
+                {%endif%}
+            </div>
+            <div id="obyvak">
+                {%if lights[0][1]['current_state'] == True%}
+                    <p>Obyvák - On - {{lights[0][1]['color_temperature']}} K</p>
+                    <script>
+                        document.querySelector('#obyvak').classList.add('on')
+                    </script>
+                {%else%}
+                    <p>Obyvák - Off</p>
+                    <script>
+                        document.querySelector('#obyvak').classList.remove('off')
+                    </script>
+                {%endif%}
+                <form action="{{url_for('switch_light')}}" method="post">
+                    <input type="hidden" value="36260ff6-c936-4bc3-a6d0-8445b606af12" name="ip">
+                    <button class="light-switch">Light Switch</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{%endblock%}
